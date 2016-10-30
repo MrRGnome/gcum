@@ -22,6 +22,7 @@ echo "Starting project setup..."
 initialVM="initial-vm-$id"
 $(gcloud compute --project "$project" instances create "$initialVM" --zone "$defaultZone" --machine-type "n1-standard-1" --subnet "default" --metadata "startup-script=$startupScript,ssh-keys=ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAibPcvoZFX0zfyi2tH4YT7Educw0Sm/r7vNWvkJwGFNI6IBx4C+VOJqkvRCRSSUEU0fKrRcFXrTLLvKzOA0mKJNbCuS8t26W4gxYut3Ac3m5X9Pww82w5jZFcDjPoWVpr9oWa2m2o9PZe7e5AGUFYs0gxXpDUg1+9M1hdNCmK4p+zF2+NguzTbdBebbKjXweogmD/BYRQOECdpsrK+bnl3q4sFFeKqBAFTDYa/79ZEyw9kV7Yj54u8mkwjM7rBAOrBgLGFgeamWxSdEQe3w1tFJ/sFs20pgzYZ4J9CMuGQ0TII9L0fFFi4OwAgYBR9Q+RvIIPRS5w3+uAWVGRNRYOfQ== user" --maintenance-policy "MIGRATE" --scopes default="https://www.googleapis.com/auth/cloud-platform" --image "/ubuntu-os-cloud/ubuntu-1604-xenial-v20161020" --boot-disk-size "10" --boot-disk-type "pd-standard" --boot-disk-device-name "$initialVM")
 echo "Spun up instance"
+sleep 1m
 
 #Login and setting up reference instance
 echo "Setting SSH Key..."

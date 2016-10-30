@@ -1,1 +1,1 @@
-﻿/home/user/nheqminer/nheqminer/build/nheqminer -l equihash.usa.nicehash.com:3357 -u 1FuPC8cU9zhCrHKShsbFMXk4k4RF3zBCUu -p x
+﻿
