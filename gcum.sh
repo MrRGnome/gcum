@@ -29,7 +29,7 @@ echo "Setting SSH Key..."
 echo -e  'y\n'|ssh-keygen -q -t rsa -N "" -f /home/austin_alltech/.ssh/id_rsa
 
 echo "Logging into SSH and setup..."
-$(gcloud compute ssh user@$initialVM --command="$setupScript" --zone "us-west1-b")
+$(yes | gcloud compute ssh user@$initialVM --command="$setupScript" --zone "us-west1-b")
 sleep 2m
 
 #Create snapshot
