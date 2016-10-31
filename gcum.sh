@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 if [ -z $1 ] || [ -z $2 ] || [ -z $3 ] || [ -z $4 ];
 then
     printf "Please include 4 arguments:/n"

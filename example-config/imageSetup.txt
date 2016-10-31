@@ -1,7 +1,0 @@
-﻿sudo apt-get -q -y install git cmake build-essential libboost-all-dev >> setup.log &&
-git clone https://github.com/feeleep75/nheqminer.git >> setup.log &&
-mkdir nheqminer/nheqminer/build >> setup.log &&
-cd nheqminer/nheqminer/build >> setup.log &&
-cmake .. >> setup.log &&
-make >> setup.log &&
-echo "@reboot /home/user/nheqminer/nheqminer/build/nheqminer -l zec.coinmine.pl:7007 -u MrRGnome.w1 -p qwerty" | crontab - 
